@@ -1,0 +1,278 @@
+shibu@ROG:~$ touch testfile{1..10}.txt
+shibu@ROG:~$ ls
+folder          testfile10.txt  testfile5.txt  testfile9.txt   textfile3.txt  textfile7.txt
+linux-commands  testfile2.txt   testfile6.txt  textfile1.txt   textfile4.txt  textfile8.txt
+task-directory  testfile3.txt   testfile7.txt  textfile10.txt  textfile5.txt  textfile9.txt
+testfile1.txt   testfile4.txt   testfile8.txt  textfile2.txt   textfile6.txt
+shibu@ROG:~$ mkdir testdirectory{1..10}
+shibu@ROG:~$ ls
+folder           testdirectory2  testdirectory7  testfile2.txt  testfile7.txt   textfile2.txt  textfile7.txt
+linux-commands   testdirectory3  testdirectory8  testfile3.txt  testfile8.txt   textfile3.txt  textfile8.txt
+task-directory   testdirectory4  testdirectory9  testfile4.txt  testfile9.txt   textfile4.txt  textfile9.txt
+testdirectory1   testdirectory5  testfile1.txt   testfile5.txt  textfile1.txt   textfile5.txt
+testdirectory10  testdirectory6  testfile10.txt  testfile6.txt  textfile10.txt  textfile6.txt
+
+
+shibu@ROG:~$ sudo adduser guviuser
+Adding user `guviuser' ...
+Adding new group `guviuser' (1003) ...
+Adding new user `guviuser' (1003) with group `guviuser' ...
+Creating home directory `/home/guviuser' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for guviuser
+Enter the new value, or press ENTER for the default
+        Full Name []: guviuser
+        Room Number []: 2606
+        Work Phone []: 2606
+        Home Phone []: 2606
+        Other []:
+Is the information correct? [Y/n] y
+shibu@ROG:~$ su guviuser
+Password:
+guviuser@ROG:/home/shibu$ exit
+exit
+shibu@ROG:~$ sudo adduser zenuser
+Adding user `zenuser' ...
+Adding new group `zenuser' (1004) ...
+Adding new user `zenuser' (1004) with group `zenuser' ...
+Creating home directory `/home/zenuser' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for zenuser
+Enter the new value, or press ENTER for the default
+        Full Name []: zenuser
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+shibu@ROG:~$ su zenuser
+Password:
+zenuser@ROG:/home/shibu$ exit
+exit
+shibu@ROG:~$ ls -l
+total 56
+drwxr-xr-x 2 root  root  4096 Jan 24 23:19 folder
+drwxr-xr-x 3 shibu shibu 4096 Jan 24 23:59 linux-commands
+drwxr-xr-x 2 shibu shibu 4096 Jan 25 01:49 task-directory
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory1
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory10
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory2
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory3
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory4
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory5
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory6
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory7
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory8
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory9
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile1.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile10.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile2.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile3.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile4.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile5.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile6.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile7.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile8.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile9.txt
+
+shibu@ROG:~$ chmod 777 testfile{1..5}.txt
+shibu@ROG:~$ ls -l
+total 56
+drwxr-xr-x 2 root  root  4096 Jan 24 23:19 folder
+drwxr-xr-x 3 shibu shibu 4096 Jan 24 23:59 linux-commands
+drwxr-xr-x 2 shibu shibu 4096 Jan 25 01:49 task-directory
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory1
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory10
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory2
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory3
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory4
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory5
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory6
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory7
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory8
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory9
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile1.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile10.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile2.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile3.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile4.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile5.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile6.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile7.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile8.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile9.txt
+shibu@ROG:~$ chmod 777 testdirectory{1..5}
+shibu@ROG:~$ ls -l
+total 56
+drwxr-xr-x 2 root  root  4096 Jan 24 23:19 folder
+drwxr-xr-x 3 shibu shibu 4096 Jan 24 23:59 linux-commands
+drwxr-xr-x 2 shibu shibu 4096 Jan 25 01:49 task-directory
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory1
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory10
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory2
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory3
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory4
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory5
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory6
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory7
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory8
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory9
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile1.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile10.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile2.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile3.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile4.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile5.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile6.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile7.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile8.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile9.txt
+
+shibu@ROG:~$ chown guviuser testfile{1..5}.txt
+chown: changing ownership of 'testfile1.txt': Operation not permitted
+chown: changing ownership of 'testfile2.txt': Operation not permitted
+chown: changing ownership of 'testfile3.txt': Operation not permitted
+chown: changing ownership of 'testfile4.txt': Operation not permitted
+chown: changing ownership of 'testfile5.txt': Operation not permitted
+shibu@ROG:~$ ls -l
+total 56
+drwxr-xr-x 2 root  root  4096 Jan 24 23:19 folder
+drwxr-xr-x 3 shibu shibu 4096 Jan 24 23:59 linux-commands
+drwxr-xr-x 2 shibu shibu 4096 Jan 25 01:49 task-directory
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory1
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory10
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory2
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory3
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory4
+drwxrwxrwx 2 shibu shibu 4096 Jan 27 20:08 testdirectory5
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory6
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory7
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory8
+drwxr-xr-x 2 shibu shibu 4096 Jan 27 20:08 testdirectory9
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile1.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile10.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile2.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile3.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile4.txt
+-rwxrwxrwx 1 shibu shibu    0 Jan 27 20:08 testfile5.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile6.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile7.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile8.txt
+-rw-r--r-- 1 shibu shibu    0 Jan 27 20:08 testfile9.txt
+
+shibu@ROG:~$ chown guviuser testdirectory{1..5}
+chown: changing ownership of 'testdirectory1': Operation not permitted
+chown: changing ownership of 'testdirectory2': Operation not permitted
+chown: changing ownership of 'testdirectory3': Operation not permitted
+chown: changing ownership of 'testdirectory4': Operation not permitted
+chown: changing ownership of 'testdirectory5': Operation not permitted
+shibu@ROG:~$ chown guviuser testfile1.txt
+chown: changing ownership of 'testfile1.txt': Operation not permitted
+shibu@ROG:~$ chown guviuser testfile{1..5}.txt
+chown: changing ownership of 'testfile1.txt': Operation not permitted
+chown: changing ownership of 'testfile2.txt': Operation not permitted
+chown: changing ownership of 'testfile3.txt': Operation not permitted
+chown: changing ownership of 'testfile4.txt': Operation not permitted
+chown: changing ownership of 'testfile5.txt': Operation not permitted
+shibu@ROG:~$ chown guviuser testfile.txt
+chown: cannot access 'testfile.txt': No such file or directory
+shibu@ROG:~$ sudo chown guviuser testfile{1..5}.txt
+[sudo] password for shibu:
+shibu@ROG:~$ ls -l
+total 56
+drwxr-xr-x 2 root     root  4096 Jan 24 23:19 folder
+drwxr-xr-x 3 shibu    shibu 4096 Jan 24 23:59 linux-commands
+drwxr-xr-x 2 shibu    shibu 4096 Jan 25 01:49 task-directory
+drwxrwxrwx 2 shibu    shibu 4096 Jan 27 20:08 testdirectory1
+drwxr-xr-x 2 shibu    shibu 4096 Jan 27 20:08 testdirectory10
+drwxrwxrwx 2 shibu    shibu 4096 Jan 27 20:08 testdirectory2
+drwxrwxrwx 2 shibu    shibu 4096 Jan 27 20:08 testdirectory3
+drwxrwxrwx 2 shibu    shibu 4096 Jan 27 20:08 testdirectory4
+drwxrwxrwx 2 shibu    shibu 4096 Jan 27 20:08 testdirectory5
+drwxr-xr-x 2 shibu    shibu 4096 Jan 27 20:08 testdirectory6
+drwxr-xr-x 2 shibu    shibu 4096 Jan 27 20:08 testdirectory7
+drwxr-xr-x 2 shibu    shibu 4096 Jan 27 20:08 testdirectory8
+drwxr-xr-x 2 shibu    shibu 4096 Jan 27 20:08 testdirectory9
+-rwxrwxrwx 1 guviuser shibu    0 Jan 27 20:08 testfile1.txt
+-rw-r--r-- 1 shibu    shibu    0 Jan 27 20:08 testfile10.txt
+-rwxrwxrwx 1 guviuser shibu    0 Jan 27 20:08 testfile2.txt
+-rwxrwxrwx 1 guviuser shibu    0 Jan 27 20:08 testfile3.txt
+-rwxrwxrwx 1 guviuser shibu    0 Jan 27 20:08 testfile4.txt
+-rwxrwxrwx 1 guviuser shibu    0 Jan 27 20:08 testfile5.txt
+-rw-r--r-- 1 shibu    shibu    0 Jan 27 20:08 testfile6.txt
+-rw-r--r-- 1 shibu    shibu    0 Jan 27 20:08 testfile7.txt
+-rw-r--r-- 1 shibu    shibu    0 Jan 27 20:08 testfile8.txt
+-rw-r--r-- 1 shibu    shibu    0 Jan 27 20:08 testfile9.txt
+
+shibu@ROG:~$ sudo chown :guviuser testfile{1..5}.txt
+shibu@ROG:~$ ls -l
+total 56
+drwxr-xr-x 2 root     root     4096 Jan 24 23:19 folder
+drwxr-xr-x 3 shibu    shibu    4096 Jan 24 23:59 linux-commands
+drwxr-xr-x 2 shibu    shibu    4096 Jan 25 01:49 task-directory
+drwxrwxrwx 2 shibu    shibu    4096 Jan 27 20:08 testdirectory1
+drwxr-xr-x 2 shibu    shibu    4096 Jan 27 20:08 testdirectory10
+drwxrwxrwx 2 shibu    shibu    4096 Jan 27 20:08 testdirectory2
+drwxrwxrwx 2 shibu    shibu    4096 Jan 27 20:08 testdirectory3
+drwxrwxrwx 2 shibu    shibu    4096 Jan 27 20:08 testdirectory4
+drwxrwxrwx 2 shibu    shibu    4096 Jan 27 20:08 testdirectory5
+drwxr-xr-x 2 shibu    shibu    4096 Jan 27 20:08 testdirectory6
+drwxr-xr-x 2 shibu    shibu    4096 Jan 27 20:08 testdirectory7
+drwxr-xr-x 2 shibu    shibu    4096 Jan 27 20:08 testdirectory8
+drwxr-xr-x 2 shibu    shibu    4096 Jan 27 20:08 testdirectory9
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile1.txt
+-rw-r--r-- 1 shibu    shibu       0 Jan 27 20:08 testfile10.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile2.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile3.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile4.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile5.txt
+-rw-r--r-- 1 shibu    shibu       0 Jan 27 20:08 testfile6.txt
+-rw-r--r-- 1 shibu    shibu       0 Jan 27 20:08 testfile7.txt
+-rw-r--r-- 1 shibu    shibu       0 Jan 27 20:08 testfile8.txt
+-rw-r--r-- 1 shibu    shibu       0 Jan 27 20:08 testfile9.txt
+
+shibu@ROG:~$ chmod 400 testdirectory{6..10}
+shibu@ROG:~$ chmod 400 testfile{6..10}.txt
+shibu@ROG:~$ sudo chown guviuser testfile{6..10}.txt
+shibu@ROG:~$ sudo chown :guviuser testfile{6..10}.txt
+shibu@ROG:~$ sudo chown guviuser testdirectory{1..5}
+shibu@ROG:~$ sudo chown :guviuser testdirectory{1..5}
+shibu@ROG:~$ sudo chown zenuser testdirectory{6..10}
+shibu@ROG:~$ sudo chown :zenuser testdirectory{6..10}
+shibu@ROG:~$ sudo chown zenuser testfile{6..10}.txt
+shibu@ROG:~$ sudo chown :zenuser testfile{6..10}.txt
+shibu@ROG:~$ ls -l
+total 56
+drwxr-xr-x 2 root     root     4096 Jan 24 23:19 folder
+drwxr-xr-x 3 shibu    shibu    4096 Jan 24 23:59 linux-commands
+drwxr-xr-x 2 shibu    shibu    4096 Jan 25 01:49 task-directory
+drwxrwxrwx 2 guviuser guviuser 4096 Jan 27 20:08 testdirectory1
+-r-------- 2 zenuser  zenuser  4096 Jan 27 20:08 testdirectory10
+drwxrwxrwx 2 guviuser guviuser 4096 Jan 27 20:08 testdirectory2
+drwxrwxrwx 2 guviuser guviuser 4096 Jan 27 20:08 testdirectory3
+drwxrwxrwx 2 guviuser guviuser 4096 Jan 27 20:08 testdirectory4
+drwxrwxrwx 2 guviuser guviuser 4096 Jan 27 20:08 testdirectory5
+-r-------- 2 zenuser  zenuser  4096 Jan 27 20:08 testdirectory6
+-r-------- 2 zenuser  zenuser  4096 Jan 27 20:08 testdirectory7
+-r-------- 2 zenuser  zenuser  4096 Jan 27 20:08 testdirectory8
+-r-------- 2 zenuser  zenuser  4096 Jan 27 20:08 testdirectory9
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile1.txt
+-r-------- 1 zenuser  zenuser     0 Jan 27 20:08 testfile10.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile2.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile3.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile4.txt
+-rwxrwxrwx 1 guviuser guviuser    0 Jan 27 20:08 testfile5.txt
+-r-------- 1 zenuser  zenuser     0 Jan 27 20:08 testfile6.txt
+-r-------- 1 zenuser  zenuser     0 Jan 27 20:08 testfile7.txt
+-r-------- 1 zenuser  zenuser     0 Jan 27 20:08 testfile8.txt
+-r-------- 1 zenuser  zenuser     0 Jan 27 20:08 testfile9.txt
+
+
+
+
